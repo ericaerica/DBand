@@ -113,5 +113,5 @@ public class NominationInsertion extends JFrame {
 		JButton btnDone = new JButton("Done");
 		btnDone.setBounds(345, 238, 89, 23);
 		contentPane.add(btnDone);
-	} //
+	} 
 }
