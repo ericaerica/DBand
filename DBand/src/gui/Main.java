@@ -11,7 +11,7 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JButton;
 
-public class main extends JFrame {
+public class Main extends JFrame {
 
 	private JPanel contentPane;
 
@@ -22,7 +22,7 @@ public class main extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					main frame = new main();
+					Main frame = new Main();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -34,7 +34,7 @@ public class main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public main() {
+	public Main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 280, 268);
 		contentPane = new JPanel();
