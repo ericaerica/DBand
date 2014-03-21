@@ -48,6 +48,7 @@ public class ConcertInsertion extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	//
 	public ConcertInsertion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 468, 401);
