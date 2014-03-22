@@ -49,6 +49,7 @@ public class ConcertInsertion extends JFrame {
 	 * Create the frame.
 	 */
 	
+	
 	public ConcertInsertion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 468, 401);
@@ -122,7 +123,7 @@ public class ConcertInsertion extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		button.setBounds(337, 210, 39, 23);
+		button.setBounds(337, 210, 57, 23);
 		contentPane.add(button);
 		
 		JScrollPane scrollPane = new JScrollPane();
