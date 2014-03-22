@@ -46,6 +46,7 @@ public class BandInsertion extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * 
 	 */
 	public BandInsertion() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
