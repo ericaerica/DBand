@@ -12,7 +12,7 @@ import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
-public class Eliminate extends JFrame {
+public class Delete extends JFrame {
 
 	private JPanel contentPane;
 
@@ -23,7 +23,7 @@ public class Eliminate extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Eliminate frame = new Eliminate();
+					Delete frame = new Delete();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class Eliminate extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Eliminate() {
+	public Delete() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 346, 407);
 		contentPane = new JPanel();
