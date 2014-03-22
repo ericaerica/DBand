@@ -20,12 +20,13 @@ public class BandInsertion extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtGenregenregenre;
 	private JTextField txtNameSurname;
 	private JTextField txtBirthCountry;
 	private JTextField txtSurname;
 	private JTextField txtStageName;
 	private JTextField txtDdmmyyyy;
+	private JTextField txtActiveinactive;
 
 	/**
 	 * Launch the application.
@@ -91,10 +92,11 @@ public class BandInsertion extends JFrame {
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(298, 177, 175, 22);
-		contentPane.add(textField_3);
-		textField_3.setColumns(10);
+		txtGenregenregenre = new JTextField();
+		txtGenregenregenre.setText("genre1;genre2;genre3");
+		txtGenregenregenre.setBounds(298, 177, 175, 22);
+		contentPane.add(txtGenregenregenre);
+		txtGenregenregenre.setColumns(10);
 		
 		JButton button = new JButton("Insert!");
 		button.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -143,9 +145,14 @@ public class BandInsertion extends JFrame {
 		panel_1.add(txtDdmmyyyy);
 		txtDdmmyyyy.setColumns(10);
 		
+		txtActiveinactive = new JTextField();
+		txtActiveinactive.setText("active/inactive");
+		txtActiveinactive.setBounds(131, 48, 116, 22);
+		panel_1.add(txtActiveinactive);
+		txtActiveinactive.setColumns(10);
+		
 		JButton button_1 = new JButton("+");
 		button_1.setBounds(693, 230, 41, 25);
 		contentPane.add(button_1);
 	}
-
 }
