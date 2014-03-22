@@ -1,16 +1,17 @@
-package gui;
+package mainGUI;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Font;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import javax.swing.JButton;
 
-public class Update extends JFrame {
+public class Insert extends JFrame {
 
 	private JPanel contentPane;
 
@@ -21,7 +22,7 @@ public class Update extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Update frame = new Update();
+					Insert frame = new Insert();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,7 +34,7 @@ public class Update extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Update() {
+	public Insert() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 170, 252);
 		contentPane = new JPanel();
@@ -41,7 +42,7 @@ public class Update extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblInsertNewItem = new JLabel("Update Item");
+		JLabel lblInsertNewItem = new JLabel("Insert New Item");
 		lblInsertNewItem.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblInsertNewItem.setHorizontalAlignment(SwingConstants.CENTER);
 		lblInsertNewItem.setBounds(10, 11, 134, 44);
