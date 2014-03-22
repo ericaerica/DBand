@@ -39,7 +39,6 @@ public class SQLConnection {
 		}
 	}
 
-	
 	/**
 	 * This method executes the query and returns a LinkedList whose first element
 	 * is an array containing the names of the columns (String[]) and whose second
@@ -50,12 +49,13 @@ public class SQLConnection {
 	 * @return  LinkedList containing the titles and the contents
 	 */
 	@SuppressWarnings("unchecked")
-	public LinkedList exeQuery(String query) {
+	public LinkedList searchQuery(String query) {
 
 		LinkedList tableInfo = new LinkedList();
 
 		try {
 			// Execute the query
+			
 			rs = st.executeQuery(query);
 			rsmd = rs.getMetaData(); // Name of the columns
 
@@ -97,6 +97,28 @@ public class SQLConnection {
 		return tableInfo;
 	}
 
+	
+	
+	
+
+	
+	/**
+	 * This method executes a query (Delete, Update, Insert) 
+	 * @param query the query to be executed
+	 */
+	@SuppressWarnings("unchecked")
+	public void otherQuery(String query) {
+
+		try {
+			// Execute the query
+			st.executeUpdate(query);
+		} catch (SQLException e) {}
+
+	}
+	
+	
+
+	
 	// ********************************************************
 	// Getters and Setters
 

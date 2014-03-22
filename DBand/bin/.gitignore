@@ -1,6 +1,4 @@
-/gui
-/engine
-/insertion
-/mainGUI
-/insertionGUI
 /updateGUI
+/insertionGUI
+/mainGUI
+/engine

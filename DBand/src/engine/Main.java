@@ -7,7 +7,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		SQLConnection c = new SQLConnection();
-		c.exeQuery("select * from musician");
+		c.searchQuery("select * from musician");
 
 	}
 
