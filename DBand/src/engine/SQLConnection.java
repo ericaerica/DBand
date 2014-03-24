@@ -84,10 +84,9 @@ public class SQLConnection {
 			tableInfo.add(colNames);
 			tableInfo.add(contents);
 
-			/*
-			 * for (int j = 0; j < contents[0].size(); j++) { for (int i = 0; i
-			 * < contents.length; i++) { System.out.print(contents[i].get(j) +
-			 * "\t"); } System.out.println(); }
+			
+			 /* for (int j = 0; j < contents[0].size(); j++) { for (int i = 0; i
+			  < contents.length; i++) { System.out.print(contents[i].get(j) + "\t"); } System.out.println(); }
 			 */
 
 		} catch (SQLException e) {
@@ -116,9 +115,10 @@ public class SQLConnection {
 	/**
 	 * This method executes a query (Delete, Update, Insert) 
 	 * @param query the query to be executed
+	 * @return 
 	 */
 	@SuppressWarnings("unchecked")
-	public void otherQuery(String query) {
+	public String otherQuery(String query) {
 		try {
 			// Execute the query
 			st.executeUpdate(query);
@@ -140,6 +140,7 @@ public class SQLConnection {
 				lgr.log(Level.WARNING, ex.getMessage(), ex);
 			}
 		}
+		return query;
 	}
 	
 	

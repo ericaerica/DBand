@@ -1,12 +1,17 @@
 package insertionGUI;
 
 
+import engine.SQLConnection;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
 import java.awt.Font;
+
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -41,7 +46,7 @@ public class ConcertInsertion extends JFrame {
 		contentPane.add(lblCompleteTheFields);
 		
 		JLabel lblBand = new JLabel("Band");
-		lblBand.setBounds(178, 68, 46, 14);
+		lblBand.setBounds(161, 71, 46, 14);
 		contentPane.add(lblBand);
 		
 		JLabel lblDate = new JLabel("Date");
@@ -85,9 +90,14 @@ public class ConcertInsertion extends JFrame {
 		btnDone.setBounds(363, 339, 89, 23);
 		contentPane.add(btnDone);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(234, 68, 73, 20);
-		contentPane.add(comboBox);
+		JComboBox comboBand = new JComboBox();
+		comboBand.setBounds(234, 68, 73, 20);
+		contentPane.add(comboBand);
+		
+		
+		String options =  SQLConnection.getCurrentConnection().otherQuery("select name from band");
+		comboBand.setModel(new DefaultComboBoxModel(new String[] { options }));
+		
 		
 		JLabel lblSongs_1 = new JLabel("Songs [name; lenght (hh:mm:ss)] :");
 		lblSongs_1.setHorizontalAlignment(SwingConstants.CENTER);

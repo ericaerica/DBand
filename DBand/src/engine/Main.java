@@ -1,5 +1,7 @@
 package engine;
 
+import mainGUI.MainGUI;
+
 public class Main {
 
 	/**
@@ -7,7 +9,10 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		SQLConnection c = new SQLConnection();
-		c.searchQuery("select * from musician");
+		MainGUI frame = new MainGUI();
+		frame.setVisible(true);
+		
+		//c.searchQuery("select * from band");
 
 	}
 

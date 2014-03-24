@@ -57,17 +57,18 @@ public class NominationInsertion extends JFrame {
 		lblBand.setBounds(230, 62, 46, 14);
 		contentPane.add(lblBand);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(103, 59, 86, 20);
-		contentPane.add(comboBox);
+		JComboBox comboAward = new JComboBox();
+		comboAward.setBounds(103, 59, 86, 20);
+		contentPane.add(comboAward);
+		
 		
 		JLabel lblAward = new JLabel("Award");
 		lblAward.setBounds(54, 62, 46, 14);
 		contentPane.add(lblAward);
 		
-		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(286, 59, 84, 17);
-		contentPane.add(comboBox_1);
+		JComboBox comboBand = new JComboBox();
+		comboBand.setBounds(286, 59, 84, 17);
+		contentPane.add(comboBand);
 		
 		JLabel lblYear = new JLabel("Year");
 		lblYear.setBounds(54, 121, 46, 14);
