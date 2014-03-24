@@ -20,6 +20,7 @@ public class Delete extends JFrame {
 	 * Create the frame.
 	 */
 	public Delete() {
+		setTitle("Deletion");
 		setBounds(100, 100, 346, 407);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

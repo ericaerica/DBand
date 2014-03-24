@@ -35,8 +35,9 @@ public class MainGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public MainGUI() {
+		setTitle("Band Database");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 280, 268);
+		setBounds(100, 100, 333, 268);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -45,23 +46,23 @@ public class MainGUI extends JFrame {
 		JLabel lblBandDataBase = new JLabel("Band Database");
 		lblBandDataBase.setFont(new Font("Tahoma", Font.PLAIN, 21));
 		lblBandDataBase.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBandDataBase.setBounds(10, 11, 252, 49);
+		lblBandDataBase.setBounds(0, 11, 315, 49);
 		contentPane.add(lblBandDataBase);
 		
 		JButton btnSearch = new JButton("Search");
-		btnSearch.setBounds(87, 71, 89, 23);
+		btnSearch.setBounds(113, 65, 89, 23);
 		contentPane.add(btnSearch);
 		
 		JButton btnInsert = new JButton("Insert");
-		btnInsert.setBounds(87, 105, 89, 23);
+		btnInsert.setBounds(113, 99, 89, 23);
 		contentPane.add(btnInsert);
 		
 		JButton btnUpdate = new JButton("Update");
-		btnUpdate.setBounds(87, 139, 89, 23);
+		btnUpdate.setBounds(113, 133, 89, 23);
 		contentPane.add(btnUpdate);
 		
 		JButton btnDelete = new JButton("Delete");
-		btnDelete.setBounds(87, 173, 89, 23);
+		btnDelete.setBounds(113, 167, 89, 23);
 		contentPane.add(btnDelete);
 		
 //***************************** Action listeners ***********************************//

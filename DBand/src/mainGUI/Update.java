@@ -23,6 +23,7 @@ public class Update extends JFrame {
 	 * Create the frame.
 	 */
 	public Update() {
+		setTitle("Database Update");
 		setBounds(100, 100, 578, 474);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -32,6 +32,7 @@ public class ConcertInsertion extends JFrame {
 	 */
 	
 	public ConcertInsertion() {
+		setTitle("Concert Insertion");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 468, 401);
 		contentPane = new JPanel();

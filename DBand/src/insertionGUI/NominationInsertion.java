@@ -40,6 +40,7 @@ public class NominationInsertion extends JFrame {
 	 * Create the frame.
 	 */
 	public NominationInsertion() {
+		setTitle("Nomination Insertion");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

@@ -26,6 +26,7 @@ public class AlbumInsertion extends JFrame {
 	 * Create the frame.
 	 */
 	public AlbumInsertion() {
+		setTitle("Album Insertion");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 637, 523);
 		contentPane = new JPanel();

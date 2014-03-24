@@ -24,8 +24,9 @@ public class Insert extends JFrame {
 	 * Create the frame.
 	 */
 	public Insert() {
+		setTitle("Insertion");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
-		setBounds(100, 100, 170, 252);
+		setBounds(100, 100, 263, 252);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -34,23 +35,23 @@ public class Insert extends JFrame {
 		JLabel lblInsertNewItem = new JLabel("Insert New Item");
 		lblInsertNewItem.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		lblInsertNewItem.setHorizontalAlignment(SwingConstants.CENTER);
-		lblInsertNewItem.setBounds(10, 11, 134, 44);
+		lblInsertNewItem.setBounds(0, 11, 245, 44);
 		contentPane.add(lblInsertNewItem);
 		
 		JRadioButton btnAlbum = new JRadioButton("Album");
-		btnAlbum.setBounds(30, 62, 89, 23);
+		btnAlbum.setBounds(81, 64, 89, 23);
 		contentPane.add(btnAlbum);
 		
 		JRadioButton btnBand = new JRadioButton("Band");
-		btnBand.setBounds(30, 96, 89, 23);
+		btnBand.setBounds(81, 98, 89, 23);
 		contentPane.add(btnBand);
 		
 		JRadioButton btnConcert = new JRadioButton("Concert");
-		btnConcert.setBounds(30, 130, 89, 23);
+		btnConcert.setBounds(81, 132, 89, 23);
 		contentPane.add(btnConcert);
 		
 		JRadioButton btnAward = new JRadioButton("Award");
-		btnAward.setBounds(30, 164, 89, 23);
+		btnAward.setBounds(81, 166, 89, 23);
 		contentPane.add(btnAward);
 	
 		ButtonGroup group = new ButtonGroup();
