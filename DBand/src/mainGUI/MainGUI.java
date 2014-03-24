@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainGUI extends JFrame {
 
@@ -63,5 +65,35 @@ public class MainGUI extends JFrame {
 		JButton btnDelete = new JButton("Delete");
 		btnDelete.setBounds(87, 173, 89, 23);
 		contentPane.add(btnDelete);
+		
+//******Action listeners
+		
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Search search = new Search();
+				search.setVisible(true);
+			}
+		});
+		
+		btnInsert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Insert insert = new Insert();
+				insert.setVisible(true);
+			}
+		});
+		
+		btnUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Update update = new Update();
+				update.setVisible(true);
+			}
+		});
+		
+		btnDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Delete delete = new Delete();
+				delete.setVisible(true);
+			}
+		});
 	}
 }

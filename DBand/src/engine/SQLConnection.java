@@ -10,6 +10,7 @@ import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 public class SQLConnection {
 
 	private static SQLConnection currentConnection;
@@ -32,7 +33,6 @@ public class SQLConnection {
 		try {
 			con = DriverManager.getConnection(url, user, password);
 			st = ((java.sql.Connection) con).createStatement();
-
 		} catch (SQLException ex) {
 			Logger lgr = Logger.getLogger(SQLConnection.class.getName());
 			lgr.log(Level.SEVERE, ex.getMessage(), ex);
@@ -76,7 +76,6 @@ public class SQLConnection {
 					String a = rs.getString(i);
 					contents[i - 1].add(a);
 				}
-
 			}
 
 			// Add the array with the column names and the array
@@ -93,13 +92,25 @@ public class SQLConnection {
 
 		} catch (SQLException e) {
 			rs = null;
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+
+			} catch (SQLException ex) {
+				Logger lgr = Logger.getLogger(SQLConnection.class.getName());
+				lgr.log(Level.WARNING, ex.getMessage(), ex);
+			}
 		}
 		return tableInfo;
 	}
-
-	
-	
-	
 
 	
 	/**
@@ -108,16 +119,29 @@ public class SQLConnection {
 	 */
 	@SuppressWarnings("unchecked")
 	public void otherQuery(String query) {
-
 		try {
 			// Execute the query
 			st.executeUpdate(query);
 		} catch (SQLException e) {}
+		finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (st != null) {
+					st.close();
+				}
+				if (con != null) {
+					con.close();
+				}
 
+			} catch (SQLException ex) {
+				Logger lgr = Logger.getLogger(SQLConnection.class.getName());
+				lgr.log(Level.WARNING, ex.getMessage(), ex);
+			}
+		}
 	}
 	
-	
-
 	
 	// ********************************************************
 	// Getters and Setters
@@ -185,5 +209,4 @@ public class SQLConnection {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }

@@ -40,7 +40,6 @@ public class Update extends JFrame {
 	 * Create the frame.
 	 */
 	public Update() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 578, 474);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
