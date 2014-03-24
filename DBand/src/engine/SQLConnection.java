@@ -85,9 +85,9 @@ public class SQLConnection {
 			tableInfo.add(contents);
 
 			
-			 /* for (int j = 0; j < contents[0].size(); j++) { for (int i = 0; i
+			  for (int j = 0; j < contents[0].size(); j++) { for (int i = 0; i
 			  < contents.length; i++) { System.out.print(contents[i].get(j) + "\t"); } System.out.println(); }
-			 */
+			 
 
 		} catch (SQLException e) {
 			rs = null;

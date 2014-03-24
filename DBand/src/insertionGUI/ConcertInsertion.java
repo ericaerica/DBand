@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 import java.awt.Font;
+import java.util.LinkedList;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextField;
@@ -96,9 +97,9 @@ public class ConcertInsertion extends JFrame {
 		contentPane.add(comboBand);
 		
 		
-		Object options =  SQLConnection.getCurrentConnection().searchQuery("select name from band");
-		System.out.println(options);
-		comboBand.setModel(new DefaultComboBoxModel(new Object[] { options }));
+		LinkedList options =  SQLConnection.getCurrentConnection().searchQuery("select name from band");
+				System.out.println(options);
+		comboBand.setModel(new DefaultComboBoxModel(new Object[] { options.get(1)}));
 		
 		
 		JLabel lblSongs_1 = new JLabel("Songs [name; lenght (hh:mm:ss)] :");

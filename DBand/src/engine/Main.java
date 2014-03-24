@@ -12,7 +12,7 @@ public class Main {
 		MainGUI frame = new MainGUI();
 		frame.setVisible(true);
 		
-		//c.searchQuery("select * from band");
+		//c.searchQuery("select name from band");
 
 	}
 
