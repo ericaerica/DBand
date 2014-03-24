@@ -96,8 +96,9 @@ public class ConcertInsertion extends JFrame {
 		contentPane.add(comboBand);
 		
 		
-		String options =  SQLConnection.getCurrentConnection().otherQuery("select name from band");
-		comboBand.setModel(new DefaultComboBoxModel(new String[] { options }));
+		Object options =  SQLConnection.getCurrentConnection().searchQuery("select name from band");
+		System.out.println(options);
+		comboBand.setModel(new DefaultComboBoxModel(new Object[] { options }));
 		
 		
 		JLabel lblSongs_1 = new JLabel("Songs [name; lenght (hh:mm:ss)] :");

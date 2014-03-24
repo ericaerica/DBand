@@ -118,7 +118,7 @@ public class SQLConnection {
 	 * @return 
 	 */
 	@SuppressWarnings("unchecked")
-	public String otherQuery(String query) {
+	public void otherQuery(String query) {
 		try {
 			// Execute the query
 			st.executeUpdate(query);
@@ -140,7 +140,6 @@ public class SQLConnection {
 				lgr.log(Level.WARNING, ex.getMessage(), ex);
 			}
 		}
-		return query;
 	}
 	
 	
