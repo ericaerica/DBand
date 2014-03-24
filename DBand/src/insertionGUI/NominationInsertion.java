@@ -1,14 +1,13 @@
 package insertionGUI;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import javax.swing.ButtonGroup;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
@@ -41,7 +40,7 @@ public class NominationInsertion extends JFrame {
 	 * Create the frame.
 	 */
 	public NominationInsertion() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,7 +58,7 @@ public class NominationInsertion extends JFrame {
 		contentPane.add(lblBand);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(161, 59, 28, 20);
+		comboBox.setBounds(103, 59, 86, 20);
 		contentPane.add(comboBox);
 		
 		JLabel lblAward = new JLabel("Award");
@@ -67,7 +66,7 @@ public class NominationInsertion extends JFrame {
 		contentPane.add(lblAward);
 		
 		JComboBox comboBox_1 = new JComboBox();
-		comboBox_1.setBounds(342, 59, 28, 20);
+		comboBox_1.setBounds(286, 59, 84, 17);
 		contentPane.add(comboBox_1);
 		
 		JLabel lblYear = new JLabel("Year");
@@ -102,6 +101,7 @@ public class NominationInsertion extends JFrame {
 		lblWin.setBounds(230, 174, 46, 14);
 		contentPane.add(lblWin);
 		
+		ButtonGroup group = new ButtonGroup();
 		JRadioButton rdbtnYes = new JRadioButton("Yes");
 		rdbtnYes.setBounds(286, 170, 109, 23);
 		contentPane.add(rdbtnYes);
@@ -109,6 +109,9 @@ public class NominationInsertion extends JFrame {
 		JRadioButton rdbtnNo = new JRadioButton("No");
 		rdbtnNo.setBounds(286, 199, 109, 23);
 		contentPane.add(rdbtnNo);
+		
+		group.add(rdbtnYes);
+		group.add(rdbtnNo);
 		
 		JButton btnDone = new JButton("Done");
 		btnDone.setBounds(345, 238, 89, 23);

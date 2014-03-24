@@ -1,7 +1,5 @@
 package insertionGUI;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,12 +10,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class ConcertInsertion extends JFrame {
 
@@ -26,31 +20,14 @@ public class ConcertInsertion extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
-	private JTextField txtName;
-	private JTextField txtHhmmss;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ConcertInsertion frame = new ConcertInsertion();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
 	
 	public ConcertInsertion() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 468, 401);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -109,44 +86,20 @@ public class ConcertInsertion extends JFrame {
 		contentPane.add(btnDone);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(279, 68, 28, 20);
+		comboBox.setBounds(234, 68, 73, 20);
 		contentPane.add(comboBox);
 		
-		JLabel lblSongs_1 = new JLabel("Songs");
-		lblSongs_1.setBounds(62, 214, 46, 14);
+		JLabel lblSongs_1 = new JLabel("Songs [name; lenght (hh:mm:ss)] :");
+		lblSongs_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSongs_1.setBounds(34, 203, 297, 14);
 		contentPane.add(lblSongs_1);
 		
-		JButton button = new JButton("+");
-		button.setFont(new Font("Tahoma", Font.PLAIN, 10));
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		button.setBounds(337, 210, 39, 23);
-		contentPane.add(button);
-		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(121, 212, 215, 139);
+		scrollPane.setBounds(34, 228, 305, 106);
 		contentPane.add(scrollPane);
 		
-		JPanel panel = new JPanel();
-		scrollPane.setViewportView(panel);
-		panel.setLayout(new GridLayout(1, 0, 0, 0));
-		
-		JPanel panel_1 = new JPanel();
-		panel.add(panel_1);
-		panel_1.setLayout(null);
-		
-		txtName = new JTextField();
-		txtName.setText("Name");
-		txtName.setBounds(10, 11, 86, 20);
-		panel_1.add(txtName);
-		txtName.setColumns(10);
-		
-		txtHhmmss = new JTextField();
-		txtHhmmss.setText("hh:mm:ss");
-		txtHhmmss.setBounds(117, 11, 86, 20);
-		panel_1.add(txtHhmmss);
-		txtHhmmss.setColumns(10);
+		JTextArea txtrPleasePressEnter = new JTextArea();
+		txtrPleasePressEnter.setText("Please press enter key after every length");
+		scrollPane.setViewportView(txtrPleasePressEnter);
 	}
 }
